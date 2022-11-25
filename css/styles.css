@@ -20,9 +20,18 @@ body{
     font-size: 1.6rem;
     background-color: var(--primario);
 }
-
+h1{
+    text-align: center;
+    color: var(--secundario);
+    font-size: 4rem;
+    font-family: var(--fuentePricipal);
+}
 a{
     text-decoration: none;
+}
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
 }
 
 /**HEADER**/
@@ -30,7 +39,7 @@ a{
     display: flex;
     justify-content: center;
 }
-.header_logo {
+.header__logo {
     margin: 3rem;
 }
 
@@ -42,16 +51,60 @@ a{
     justify-content: center;
     gap: 2rem;
 }
-.navegacion_enlace{
+.navegacion__enlace{
     font-size: 3rem;
     font-family: var(--fuentePricipal);
     color: var(--blanco);
     
 }
-.navegacion_enlace--activo,
-.navegacion_enlace:hover{
+.navegacion__enlace--activo,
+.navegacion__enlace:hover{
     color: var(--secundario);
-    font-size: 3rem;
+}
+
+/*PRODUCTOS*/
+.productos{ 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:1rem;
+}
+
+.producto{
+    background-color: var(--primarioOscuro);
+    padding: 2rem;
+    
+
+}
+
+.producto__nombre,
+.producto__precio {
     font-family: var(--fuentePricipal);
+    margin: 1rem 0;
+    text-align: center;
+}
+.producto__nombre{
+    font-size: 4rem;
+    color: var(--blanco);
+}
+.producto__precio{
+    font-size: 3rem;
+    color: var(--secundario);
+}
+
+/*GRAFICOS FIJOS*/
+.grafico--camisas{
+    background-image: url(../img/grafico1.jpg);
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+    background-repeat: none;
+    background-size: cover;
+}
+
+.grafico--node{
+    background-image: url(../img/grafico2.jpg);
+    grid-row: 5 / 6;
+    grid-column: 2 / 4;
+    background-repeat: none;
+    background-size: cover;
 }
 
